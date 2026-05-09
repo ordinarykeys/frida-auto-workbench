@@ -2,7 +2,7 @@
   "$schema": "https://schema.tauri.app/config/2",
   "productName": "Frida Auto Workbench",
   "version": "0.1.0",
-  "identifier": "com.pingfan.fridamcp",
+  "identifier": "com.fridaauto.workbench",
   "build": {
     "beforeDevCommand": "npm run dev",
     "devUrl": "http://localhost:1420",
@@ -13,11 +13,13 @@
     "windows": [
       {
         "title": "Frida Auto Workbench",
-        "width": 1720,
-        "height": 1040,
-        "minWidth": 1440,
-        "minHeight": 900,
-        "resizable": true
+        "width": 1440,
+        "height": 900,
+        "minWidth": 1180,
+        "minHeight": 720,
+        "resizable": true,
+        "decorations": true,
+        "fullscreen": false
       }
     ],
     "security": {
@@ -27,10 +29,6 @@
   "bundle": {
     "active": true,
     "targets": "all",
-    "resources": [
-      "../resources/android-tools/*",
-      "../resources/frida-templates/*"
-    ],
     "icon": [
       "icons/32x32.png",
       "icons/128x128.png",
