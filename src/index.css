@@ -71,27 +71,11 @@
     @apply border border-border bg-[#fafafa] px-2 py-1.5;
   }
 
-  .terminal-log {
-    @apply grid gap-1 border border-[#2b313c] bg-[#11161d] p-2;
+  .log-box {
+    @apply grid h-[360px] content-start gap-1 overflow-hidden rounded-sm border border-[#2b313c] bg-[#11161d] p-2;
   }
 
-  .terminal-log-row {
-    @apply grid grid-cols-[58px_52px_1fr] gap-2 px-1 py-0.5 font-mono text-[11px];
-  }
-
-  .terminal-host {
-    @apply h-[360px] overflow-hidden rounded-sm border border-[#2b313c] bg-[#0d1117];
-  }
-
-  .terminal-host .xterm {
-    @apply h-full;
-  }
-
-  .terminal-host .xterm-viewport {
-    background-color: #0d1117 !important;
-  }
-
-  .terminal-host .xterm-screen {
-    padding: 6px 8px;
+  .log-row-lite {
+    @apply grid grid-cols-[64px_56px_1fr] gap-2 font-mono text-[11px];
   }
 }
