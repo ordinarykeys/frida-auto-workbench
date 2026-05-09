@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Microsoft YaHei UI", "PingFang SC", "Segoe UI", sans-serif;
+  --color-background: #f3f3f3;
+  --color-foreground: #1f1f1f;
+  --color-card: #ffffff;
+  --color-card-foreground: #1f1f1f;
+  --color-popover: #ffffff;
+  --color-popover-foreground: #1f1f1f;
+  --color-primary: #e8f0fe;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #f4f4f4;
+  --color-secondary-foreground: #2a2a2a;
+  --color-muted: #f7f7f7;
+  --color-muted-foreground: #666666;
+  --color-accent: #f0f6ff;
+  --color-accent-foreground: #1f1f1f;
+  --color-destructive: #ef4444;
+  --color-border: #cfcfcf;
+  --color-input: #bfbfbf;
+  --color-ring: rgba(66, 133, 244, 0.24);
+  --radius: 0.2rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html,
+  body {
+    @apply m-0 h-screen overflow-hidden bg-background text-foreground font-sans antialiased;
+  }
+
+  #root {
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  button,
+  input,
+  textarea,
+  select {
+    font: inherit;
+  }
+}
+
+@layer utilities {
+  .group-box {
+    @apply m-0 min-w-0 border border-border bg-white px-2 pb-2 pt-1;
+  }
+
+  .group-box legend {
+    @apply px-1 text-[12px] text-[#1f1f1f];
+  }
+
+  .group-rows {
+    @apply grid gap-2;
+  }
+
+  .field-tag {
+    @apply text-[12px] text-[#1f1f1f];
+  }
+
+  .status-box {
+    @apply border border-border bg-[#fafafa] px-2 py-1.5 text-[12px] text-[#1f1f1f];
+  }
+
+  .mini-box {
+    @apply border border-border bg-[#fafafa] px-2 py-1.5;
+  }
+
+  .terminal-log {
+    @apply grid gap-1 border border-[#2b313c] bg-[#11161d] p-2;
+  }
+
+  .terminal-log-row {
+    @apply grid grid-cols-[58px_52px_1fr] gap-2 px-1 py-0.5 font-mono text-[11px];
+  }
+
+  .terminal-host {
+    @apply h-[360px] overflow-hidden rounded-sm border border-[#2b313c] bg-[#0d1117];
+  }
+
+  .terminal-host .xterm {
+    @apply h-full;
+  }
+
+  .terminal-host .xterm-viewport {
+    background-color: #0d1117 !important;
+  }
+
+  .terminal-host .xterm-screen {
+    padding: 6px 8px;
+  }
+}
